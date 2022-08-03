@@ -18,8 +18,13 @@ const theme = {
 const App = () => {
 
   const [loaded] = useFonts({
-    
+    RobotoThin: require("./assets/fonts/Roboto-Thin.ttf"),
+    RobotoLight: require("./assets/fonts/Roboto-Light.ttf"),
+    RobotoRegular: require("./assets/fonts/Roboto-Regular.ttf"),
+    RobotoBold: require("./assets/fonts/Roboto-Bold.ttf"),
   });
+
+  if (!loaded) return null
 
   return (
     <NavigationContainer theme={theme}>
